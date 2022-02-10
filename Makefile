@@ -87,10 +87,10 @@ $(pds-cli): $(go)
 endif
 
 $(pe-postgresql-devel):
-	command -v yum && sudo yum install -y pe-postgresql11-devel  || apt install -y pe-postgresql11-devel
+	command -v yum && sudo yum install -y pe-postgresql11-devel  || sudo apt install -y pe-postgresql11-devel
 
 $(go):
-	command -v yum && sudo yum install -y golang || apt install -y golang
+	command -v yum && sudo yum install -y golang || sudo apt install -y golang
 
 $(fpm):
 	sudo /opt/puppetlabs/puppet/bin/gem install --no-document fpm
